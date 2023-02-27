@@ -1,0 +1,351 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+
+    <model name='robot'>
+	    <pose>0 0 0 0 0 0</pose>
+	    <link name='robot_base'>
+		    <pose>0 0 0 0 -0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>9.66</mass>
+				<inertia>
+					<ixx>0.08</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.19</iyy>
+					<iyz>0</iyz>
+					<izz>0.14</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_base_collision'>
+				<pose >0.04 0 0.02 0 -0 0</pose>
+				<geometry>
+				  <box>
+				    <size>0.45 0.3 0.16</size>
+				  </box>
+				</geometry>
+		    </collision>
+		    <visual name='robot_base_visual'>
+				<pose >0 0 0 0 0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/base.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    
+	    <link name='robot_wheel0'>
+		    <pose>0.1265 -0.16 -0.0384 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.075</mass>
+				<inertia>
+					<ixx>0.00009205</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00004662</iyy>
+					<iyz>0</iyz>
+					<izz>0.00004662</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_wheel0_collision'>
+				<pose >0 0 0 1.57 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.05</radius>
+						<length>0.01</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_wheel0_visual'>
+				<pose >0 0 0 0 -0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/wheel.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_wheel0_joint' type='revolute'>
+		    <child>robot_wheel0</child>
+		    <parent>robot_base</parent>
+		    <axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+					<lower>-1e+16</lower>
+					<upper>1e+16</upper>
+				</limit>
+				<dynamics>
+					<spring_reference>0</spring_reference>
+					<spring_stiffness>0</spring_stiffness>
+				</dynamics>
+			</axis>
+	    </joint>
+
+	    <link name='robot_wheel1'>
+		    <pose>0.1265 0.16 -0.0384 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.075</mass>
+				<inertia>
+					<ixx>0.00009205</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00004662</iyy>
+					<iyz>0</iyz>
+					<izz>0.00004662</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_wheel1_collision'>
+				<pose >0 0 0 1.57 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.05</radius>
+						<length>0.01</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_wheel1_visual'>
+				<pose >0 0 0 0 -0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/wheel.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_wheel1_joint' type='revolute'>
+		    <child>robot_wheel1</child>
+		    <parent>robot_base</parent>
+		    <axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+					<lower>-1e+16</lower>
+					<upper>1e+16</upper>
+				</limit>
+				<dynamics>
+					<spring_reference>0</spring_reference>
+					<spring_stiffness>0</spring_stiffness>
+				</dynamics>
+			</axis>
+	    </joint>
+
+	    <link name='robot_wheel2'>
+		    <pose>-0.1236 -0.16 -0.0384 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.075</mass>
+				<inertia>
+					<ixx>0.00009205</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00004662</iyy>
+					<iyz>0</iyz>
+					<izz>0.00004662</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_wheel2_collision'>
+				<pose >0 0 0 1.57 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.05</radius>
+						<length>0.01</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_wheel2_visual'>
+				<pose >0 0 0 0 -0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/wheel.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_wheel2_joint' type='revolute'>
+		    <child>robot_wheel2</child>
+		    <parent>robot_base</parent>
+		    <axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+					<lower>-1e+16</lower>
+					<upper>1e+16</upper>
+				</limit>
+				<dynamics>
+					<spring_reference>0</spring_reference>
+					<spring_stiffness>0</spring_stiffness>
+				</dynamics>
+			</axis>
+	    </joint>
+
+	    <link name='robot_wheel3'>
+		    <pose>-0.1236 0.16 -0.0384 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.075</mass>
+				<inertia>
+					<ixx>0.00009205</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00004662</iyy>
+					<iyz>0</iyz>
+					<izz>0.00004662</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_wheel3_collision'>
+				<pose >0 0 0 1.57 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.05</radius>
+						<length>0.01</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_wheel3_visual'>
+				<pose >0 0 0 0 -0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/wheel.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_wheel3_joint' type='revolute'>
+		    <child>robot_wheel3</child>
+		    <parent>robot_base</parent>
+		    <axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+					<lower>-1e+16</lower>
+					<upper>1e+16</upper>
+				</limit>
+				<dynamics>
+					<spring_reference>0</spring_reference>
+					<spring_stiffness>0</spring_stiffness>
+				</dynamics>
+			</axis>
+	    </joint>
+
+	    <link name='robot_mount'>
+		    <pose>0.18 0 0.057 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.046</mass>
+				<inertia>
+					<ixx>0.00006057</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00001345</iyy>
+					<iyz>0</iyz>
+					<izz>0.00007059</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_mount_collision'>
+				<pose >0 0 0 0 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.035</radius>
+						<length>0.13</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_mount_visual'>
+				<pose >0 0 0 0 -0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/mount.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_mount_joint' type='revolute'>
+		    <child>robot_mount</child>
+		    <parent>robot_base</parent>
+		    <axis>
+				<xyz>0 0 1</xyz>
+				<limit>
+					<lower>-1e+16</lower>
+					<upper>1e+16</upper>
+				</limit>
+			</axis>
+	    </joint>
+
+	    <link name='robot_oko'>
+		    <pose>0.18 0 0.11 0 0 0</pose>
+		    <inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>0.034</mass>
+				<inertia>
+					<ixx>0.00000431</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>	
+					<iyy>0.00000706</iyy>
+					<iyz>0</iyz>
+					<izz>0.00000721</izz>
+				</inertia>
+			</inertial>
+			<collision name='robot_oko_collision'>
+				<pose >0 0 0 1.57 0 0</pose>
+				<geometry>
+					<cylinder>
+						<radius>0.015</radius>
+						<length>0.05</length>
+					</cylinder>
+				</geometry>
+		    </collision>
+		    <visual name='robot_oko_visual'>
+				<pose >0 0 0 0 0 0</pose>
+				<geometry>
+				  <mesh>
+				    <scale>1 1 1</scale>
+				    <uri>/home/student/Documents/rover/dae/oko.dae</uri>
+				  </mesh>
+				</geometry>
+		    </visual>
+	    </link>
+	    <joint name='robot_oko_joint' type='revolute'>
+		    <child>robot_oko</child>
+		    <parent>robot_mount</parent>
+		    <axis>
+				<xyz>0 1 0</xyz>
+				<limit>
+					<lower>-1.05</lower>
+					<upper>1.05</upper>
+				</limit>
+			</axis>
+	    </joint>
+	    
+
+     	<plugin name="ignition::gazebo::systems::DiffDrive" filename="libignition-gazebo-diff-drive-system.so">
+		  <num_wheel_pairs>2</num_wheel_pairs>
+		  <left_joint>robot_wheel1_joint</left_joint>
+		  <left_joint>robot_wheel3_joint</left_joint>
+		  <right_joint>robot_wheel0_joint</right_joint>
+		  <right_joint>robot_wheel2_joint</right_joint>
+
+		  <!-- kinematics -->
+		  <wheel_separation>0.32</wheel_separation>
+		  <wheel_diameter>0.1</wheel_diameter>
+
+		  <!-- odometry  --> 
+		  <odometry_source>world</odometry_source>
+		  <odometry_frame>odom</odometry_frame>
+		  <robot_base_frame>robot_base</robot_base_frame>
+
+		  <!-- topic & re remappings -->
+		  <topic>cmd_vel</topic>
+		  <publish_odom>true</publish_odom>
+		  <publish_odom_tf>true</publish_odom_tf>
+		  <update_rate>100.0</update_rate>
+		</plugin>
+   
+    </model>
+       
+</sdf>
