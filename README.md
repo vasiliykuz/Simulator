@@ -6,18 +6,18 @@
 
 Цель данного робота заключается в перемещении определенного груза из одной точки в другую в городской местности. Ориентирование будет производиться на основе встроенной карты, а объезд препядствий будет производиться при помощи камер, установленных на ровере
 
-![Ровер на фоне города Долгопрудный](https://github.com/vasiliykuz/Simulator.git/raw/main/images/rover1.png)
+![Ровер на фоне города Долгопрудный](https://github.com/vasiliykuz/Simulator/raw/main/images/rover1.png)
 
-![Ровер с открытой крышкой](https://github.com/vasiliykuz/Simulator.git/raw/main/images/rover2.png)
+![Ровер с открытой крышкой](https://github.com/vasiliykuz/Simulator/raw/main/images/rover2.png)
 
 ## Quadro
 
 Квадракоптер оснащен камерой для обнаружения неполадок на столбах ЛЭБ. Квадракоптер будет управляться при помощи автопилота по заранее заданному маршруту
 
-![Квадракоптер](https://github.com/vasiliykuz/Simulator.git/raw/main/images/quadro.png)
+![Квадракоптер](https://github.com/vasiliykuz/Simulator/raw/main/images/quadro.png)
 
 ## Water robot
 
 Робот поливщик, который предназначен для поливки травы на определенной территории. На нем установлена камера для детекции растений и кустов, которые ему запрещено давить
 
-![Робот поливщик](https://github.com/vasiliykuz/Simulator.git/raw/main/images/water_robot.png)
+![Робот поливщик](https://github.com/vasiliykuz/Simulator/raw/main/images/water_robot.png)
